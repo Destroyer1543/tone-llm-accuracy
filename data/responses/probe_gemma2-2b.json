@@ -1,0 +1,172 @@
+{
+  "results": [
+    {
+      "layer": 0,
+      "auc_polite_rude": 0.5,
+      "acc_6way": 0.16666666666666666,
+      "diffmeans_norm": 0.0
+    },
+    {
+      "layer": 1,
+      "auc_polite_rude": 0.9978684413580247,
+      "acc_6way": 0.9574074074074075,
+      "diffmeans_norm": 0.647773802280426
+    },
+    {
+      "layer": 2,
+      "auc_polite_rude": 0.9999638310185185,
+      "acc_6way": 0.9925925925925926,
+      "diffmeans_norm": 1.5213737487792969
+    },
+    {
+      "layer": 3,
+      "auc_polite_rude": 0.9999710648148149,
+      "acc_6way": 0.9946759259259259,
+      "diffmeans_norm": 2.027310848236084
+    },
+    {
+      "layer": 4,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9946759259259259,
+      "diffmeans_norm": 2.836416721343994
+    },
+    {
+      "layer": 5,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9951388888888889,
+      "diffmeans_norm": 2.5105555057525635
+    },
+    {
+      "layer": 6,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9983796296296296,
+      "diffmeans_norm": 4.353696346282959
+    },
+    {
+      "layer": 7,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.999537037037037,
+      "diffmeans_norm": 4.050353050231934
+    },
+    {
+      "layer": 8,
+      "auc_polite_rude": 0.9999975887345679,
+      "acc_6way": 0.9983796296296296,
+      "diffmeans_norm": 6.38424015045166
+    },
+    {
+      "layer": 9,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9983796296296296,
+      "diffmeans_norm": 7.3831939697265625
+    },
+    {
+      "layer": 10,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9988425925925926,
+      "diffmeans_norm": 8.173277854919434
+    },
+    {
+      "layer": 11,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9981481481481481,
+      "diffmeans_norm": 9.55893325805664
+    },
+    {
+      "layer": 12,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9986111111111111,
+      "diffmeans_norm": 9.961568832397461
+    },
+    {
+      "layer": 13,
+      "auc_polite_rude": 1.0,
+      "acc_6way": 0.9958333333333332,
+      "diffmeans_norm": 10.515177726745605
+    },
+    {
+      "layer": 14,
+      "auc_polite_rude": 0.9999855324074074,
+      "acc_6way": 0.9939814814814815,
+      "diffmeans_norm": 11.46041202545166
+    },
+    {
+      "layer": 15,
+      "auc_polite_rude": 0.999486400462963,
+      "acc_6way": 0.9768518518518519,
+      "diffmeans_norm": 10.917760848999023
+    },
+    {
+      "layer": 16,
+      "auc_polite_rude": 0.9993465470679013,
+      "acc_6way": 0.9476851851851851,
+      "diffmeans_norm": 10.187180519104004
+    },
+    {
+      "layer": 17,
+      "auc_polite_rude": 0.9941599151234568,
+      "acc_6way": 0.8851851851851851,
+      "diffmeans_norm": 11.21406364440918
+    },
+    {
+      "layer": 18,
+      "auc_polite_rude": 0.9881196952160494,
+      "acc_6way": 0.8629629629629629,
+      "diffmeans_norm": 10.51473617553711
+    },
+    {
+      "layer": 19,
+      "auc_polite_rude": 0.988013599537037,
+      "acc_6way": 0.8375,
+      "diffmeans_norm": 10.680943489074707
+    },
+    {
+      "layer": 20,
+      "auc_polite_rude": 0.9859833140432098,
+      "acc_6way": 0.8541666666666666,
+      "diffmeans_norm": 12.227432250976562
+    },
+    {
+      "layer": 21,
+      "auc_polite_rude": 0.9837528935185184,
+      "acc_6way": 0.8553240740740741,
+      "diffmeans_norm": 13.103001594543457
+    },
+    {
+      "layer": 22,
+      "auc_polite_rude": 0.9894483024691357,
+      "acc_6way": 0.8891203703703703,
+      "diffmeans_norm": 15.764339447021484
+    },
+    {
+      "layer": 23,
+      "auc_polite_rude": 0.9891661844135802,
+      "acc_6way": 0.8810185185185185,
+      "diffmeans_norm": 17.534875869750977
+    },
+    {
+      "layer": 24,
+      "auc_polite_rude": 0.9949797453703704,
+      "acc_6way": 0.9131944444444444,
+      "diffmeans_norm": 21.93986701965332
+    },
+    {
+      "layer": 25,
+      "auc_polite_rude": 0.9971788194444444,
+      "acc_6way": 0.9199074074074073,
+      "diffmeans_norm": 28.298025131225586
+    },
+    {
+      "layer": 26,
+      "auc_polite_rude": 0.9950689621913579,
+      "acc_6way": 0.9060185185185186,
+      "diffmeans_norm": 8.394936561584473
+    }
+  ],
+  "best": {
+    "layer": 4,
+    "auc_polite_rude": 1.0,
+    "acc_6way": 0.9946759259259259,
+    "diffmeans_norm": 2.836416721343994
+  }
+}

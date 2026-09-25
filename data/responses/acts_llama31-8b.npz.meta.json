@@ -1,0 +1,22 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "n_prompts": 4320,
+  "n_layers": 33,
+  "d_model": 4096,
+  "registers": [
+    "very_polite",
+    "polite",
+    "neutral",
+    "rude",
+    "very_rude",
+    "command",
+    "profane"
+  ],
+  "datasets": [
+    "mmlu",
+    "arc",
+    "truthfulqa"
+  ],
+  "n_items_per_ds": 120,
+  "variants": 2
+}

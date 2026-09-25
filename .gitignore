@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.env
+.gemini_key
+.DS_Store
+PUSH_TO_GITHUB.md
+supp/
+*.eps
+data/responses/review3_benchmix_variant.json

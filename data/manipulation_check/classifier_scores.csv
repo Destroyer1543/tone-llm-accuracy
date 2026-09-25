@@ -1,0 +1,62 @@
+register,variant,p_polite_with_placeholder,p_polite_wrapper_only,wrapper
+very_polite,0,0.9957,0.9971,"I would be truly grateful if you could kindly help me with the following question. Thank you so much for your time and effort.
+
+ 
+
+I really appreciate your help."
+very_polite,1,0.9967,0.9976,"I'm so sorry to bother you, and I completely understand if you're busy, but would you be so kind as to help me with this? Thank you very much indeed.
+
+ 
+
+Thank you kindly."
+very_polite,2,0.9954,0.9980,"It would mean a great deal to me if you could gently walk through this question. I sincerely appreciate your kindness.
+
+ 
+
+With heartfelt thanks."
+polite,0,0.9889,0.9942,Could you please help me with this question? Thank you.
+polite,1,0.9919,0.9961,I'd appreciate it if you could answer the following. Thanks!
+polite,2,0.9914,0.9948,"Please could you take a look at this question for me?
+
+ 
+
+Thank you."
+neutral,0,0.2782,0.2782,
+neutral,1,0.5901,0.8081,Here is a question.
+neutral,2,0.6267,0.5922,Answer the following.
+rude,0,0.1092,0.0687,Just answer this. Don't mess it up.
+rude,1,0.3381,0.1951,"Come on, this should be easy for you. Answer it."
+rude,2,0.2199,0.0546,"Hurry up and answer the following question.
+
+ 
+
+And don't get it wrong."
+very_rude,0,0.0450,0.0739,"Listen, just answer this question and stop wasting my time.
+
+ 
+
+Honestly, how hard can it be."
+very_rude,1,0.0103,0.0151,"Ugh, you're pretty useless, but let's see if you can even get this right.
+
+ 
+
+Don't embarrass yourself."
+very_rude,2,0.0121,0.0212,"I don't have patience for your nonsense. Answer this right now.
+
+ 
+
+Any idiot could do this."
+command,0,0.7127,0.6189,You must answer the following question. Provide your answer now.
+command,1,0.8126,0.8089,Answer the following question. This is not optional.
+command,2,0.5022,0.5947,"Complete this task immediately and precisely.
+
+ 
+
+Respond now."
+profane,0,0.0129,0.0188,What the fuck is the answer to this? Just tell me.
+profane,1,0.0217,0.0801,Answer this damn question and cut the bullshit.
+profane,2,0.0202,0.0382,"Stop fucking around and give me the goddamn answer.
+
+ 
+
+Hurry the hell up."

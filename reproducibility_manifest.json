@@ -1,0 +1,226 @@
+{
+  "hardware": "NVIDIA H100 PCIe, shared node",
+  "software": {
+    "main_env": {
+      "python": "3.12.3",
+      "torch": "2.5.1+cu121",
+      "transformers": "5.7.0",
+      "datasets": "5.0.0",
+      "numpy": "2.4.3",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "pandas": "2.3.3"
+    },
+    "gpt_oss_env": {
+      "python": "3.12.3",
+      "torch": "2.13.0+cu130",
+      "transformers": "5.16.1",
+      "reason": "gpt-oss modelling code requires torch>=2.6"
+    }
+  },
+  "datasets": {
+    "mmlu": {
+      "hf": "cais/mmlu",
+      "config": "all",
+      "split": "test",
+      "rows": 14042,
+      "fingerprint": "436299c1c09696bb"
+    },
+    "arc_easy": {
+      "hf": "allenai/ai2_arc",
+      "config": "ARC-Easy",
+      "split": "test",
+      "rows": 2376,
+      "fingerprint": "b019ca21ba59e1f3"
+    },
+    "truthfulqa_mc1": {
+      "hf": "truthful_qa",
+      "config": "multiple_choice",
+      "split": "validation",
+      "rows": 817,
+      "fingerprint": "2bccadd89c3889cd"
+    }
+  },
+  "item_sampling": {
+    "method": "random.Random(seed).shuffle over row indices, first n taken, without replacement within a sample",
+    "truthfulqa_option_order": "random.Random(seed*100003 + row_index).shuffle, so option order changes with seed",
+    "primary": {
+      "per_benchmark": 200,
+      "total": 600,
+      "seed": 0
+    },
+    "repeat_samples": {
+      "seeds": [
+        1,
+        2
+      ],
+      "per_benchmark": 200,
+      "overlap_items_between_any_two_seeds": "68 to 69 of 600"
+    },
+    "large_samples": {
+      "seeds": [
+        0,
+        1
+      ],
+      "mmlu": 2000,
+      "arc_easy": 2000,
+      "truthfulqa": 817,
+      "total": 4817,
+      "overlap_between_the_two": {
+        "mmlu": 291,
+        "arc_easy": 1688,
+        "truthfulqa": 817,
+        "total": 2796,
+        "note": "MMLU and ARC shared items are identical prompts, TruthfulQA shared items carry re-shuffled options"
+      },
+      "unique_items_pooled": 6838
+    }
+  },
+  "registers": {
+    "count": 7,
+    "variants_per_register": 3,
+    "source": "src/registers.py"
+  },
+  "open_models": {
+    "Qwen/Qwen2.5-0.5B-Instruct": {
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "Qwen/Qwen2.5-1.5B-Instruct": {
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "revision": "aa8e72537993ba99e69dfaafa59ed015b17504d1",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "google/gemma-2-2b-it": {
+      "revision": "299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "google/gemma-2-9b-it": {
+      "revision": "11c9b309abf73637e4b6f9a3fa1e92e615547819",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "allenai/OLMo-2-1124-7B-Instruct": {
+      "revision": "470b1fba1ae01581f270116362ee4aa1b97f4c84",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "mistralai/Mistral-7B-Instruct-v0.3": {
+      "revision": "c170c708c41dac9275d15a8fff4eca08d52bab71",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    },
+    "openai/gpt-oss-20b": {
+      "revision": "6cee5e81ee83917806bbde320786a8fb61efebee",
+      "dtype": "bfloat16",
+      "decoding": "greedy",
+      "chat_template": "model default",
+      "mcq_max_new_tokens": 8,
+      "variants_used": 3,
+      "items_per_benchmark": 200
+    }
+  },
+  "gpt_oss_override": {
+    "model": "openai/gpt-oss-20b",
+    "reasoning_effort": "low",
+    "max_new_tokens": 256,
+    "scoring": "final channel only",
+    "items_per_benchmark": 150,
+    "variants_used": 1,
+    "unparsable": "1 of 3150"
+  },
+  "temperature_check": {
+    "models": [
+      "google/gemma-2-2b-it",
+      "meta-llama/Llama-3.1-8B-Instruct"
+    ],
+    "temperature": 0.7,
+    "generation_seed": 1
+  },
+  "closed_models": {
+    "gemini-3.5-flash": {
+      "api": "Google Generative Language API v1beta generateContent",
+      "dates": "2026-09-01 to 2026-09-02",
+      "temperature": 0,
+      "thinkingBudget": 0,
+      "max_output_tokens": 16,
+      "variants_used": 1,
+      "items_per_benchmark": 200,
+      "empty_replies": 0
+    },
+    "gemini-3.7-flash": {
+      "api": "Google Generative Language API v1beta generateContent",
+      "dates": "2026-09-01 to 2026-09-02",
+      "temperature": 0,
+      "thinking": "ON, because thinkingBudget 0 returned empty MAX_TOKENS replies",
+      "max_output_tokens": 768,
+      "variants_used": 1,
+      "items_per_benchmark": 200,
+      "empty_replies": 0
+    }
+  },
+  "exclusions": {
+    "gemini-pro-latest": "excluded, 1554 of 2520 replies empty because thinking exhausted the 768 token cap",
+    "gemini-2.5 family": "not run, unavailable to the API account used",
+    "meta-llama/Llama-3.2-1B and 3B": "not run, gated repository access denied (HTTP 403)"
+  },
+  "statistics": {
+    "estimand": "within-item mean(very_polite) minus mean(very_rude), averaged over paraphrase variants, then over items",
+    "uncertainty": "item cluster bootstrap, 5000 resamples for tests, 10000 for equivalence, rng seed 0",
+    "multiplicity": "Benjamini-Hochberg across 12 models",
+    "equivalence": "90 percent bootstrap interval inside +/- delta, delta in {0.5, 1, 2} accuracy points"
+  }
+}
