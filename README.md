@@ -46,9 +46,4 @@ Code, data and figures are released under the MIT License, see `LICENSE`.
 If you use this code or data, please cite the accompanying paper by Adithya Annamalai J K and
 Rama Parvathy L (VIT Chennai), currently under review. Citation details will be added on publication.
 
-## Benchmark mix and wording checks
 
-`src/review3_analysis.py` recomputes the very polite minus very rude difference with the three
-benchmarks weighted equally, per benchmark, and on the first paraphrase variant only. Run
-`WRITE_TABLES=1 python src/review3_analysis.py` to print the comparison and regenerate
-Supplementary Tables S10 and S11.
